@@ -9,7 +9,7 @@ const Header = () => {
     <>
       <header>
         <Navbar />
-        <div className="h-full bg-secondary">
+        <div className="h-full bg-tertiary">
           <CarouselSlider/>
         </div>
       </header>
