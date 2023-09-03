@@ -55,7 +55,7 @@ const HamburgerMenu = () => {
           <Fade duration={600} right>
             <nav
               id="hamburger-nav"
-              className={`absolute right-[-2.6rem] top-[-1.5rem] text-start w-[26rem] z-10 h-screen md:w-screen xl:right-[-1.5rem]
+              className={`absolute right-[-2.6rem] top-[-1.5rem] text-start w-[26rem] z-50 h-screen md:w-screen xl:right-[-1.5rem]
             ${menuOpen ? "" : "hidden"}`}
             >
               <ul className="w-full text-white text-md h-screen text-start bg-black font-semibold tracking-wider space-y-5 py-5">
