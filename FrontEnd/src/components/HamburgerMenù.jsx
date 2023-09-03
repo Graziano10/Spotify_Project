@@ -24,7 +24,7 @@ const HamburgerMenu = () => {
 
   return (
     <>
-      <div className="relative" ref={menuRef}>
+      <div className="relative z-50" ref={menuRef}>
         <div className="relative">
           <button
             id="hamburger-button"

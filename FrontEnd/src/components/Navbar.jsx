@@ -5,7 +5,7 @@ import HamburgerMenu from "./HamburgerMenù";
 const Navbar = () => {
   return (
     <>
-      <nav className="bg-black">
+      <nav className="bg-black z-50">
         <div className="flex flex-wrap items-center justify-between mx-4 p-2 font-semibold tracking-wider">
           <a href="https://flowbite.com/" className="flex items-center">
             <svg
