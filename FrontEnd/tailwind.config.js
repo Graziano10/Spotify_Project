@@ -21,7 +21,7 @@ export default {
       colors: {
         primary: "#535353", // grey bg-main
         secondary: "#b3b3b3", // Grey 02 text
-        tertiary: " #212121", // black ***
+        tertiary: " #121212", // black ***
         fourth: "  black", // Black bg-nav
         invert: " #1db954", // Greeen button
         colorText: "white" //white text

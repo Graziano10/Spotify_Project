@@ -76,7 +76,7 @@ const CarouselSlider = () => {
                 alt="Slide 1"
                 className="w-[10rem] h-[10rem] rounded-lg z-10"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
                 Today's Top Hits
               </p>
             </div>
@@ -86,8 +86,8 @@ const CarouselSlider = () => {
                 alt="Slide 2"
                 className="w-[10rem] h-[10rem]  rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                RapCaviar
               </p>
             </div>
             <div>
@@ -96,8 +96,8 @@ const CarouselSlider = () => {
                 alt="Slide 3"
                 className="w-[10rem] h-[10rem]  rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                All Out 2010s
               </p>
             </div>
             <div>
@@ -106,8 +106,8 @@ const CarouselSlider = () => {
                 alt="Slide 4"
                 className="w-[10rem] h-[10rem]  rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Rock Classic
               </p>
             </div>
             <div>
@@ -116,8 +116,8 @@ const CarouselSlider = () => {
                 alt="Slide 5"
                 className="w-[10rem] h-[10rem]  rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Chill Hits
               </p>
             </div>
             <div>
@@ -126,8 +126,8 @@ const CarouselSlider = () => {
                 alt="Slide 6"
                 className="w-[10rem] h-[10rem]  rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Viva Latino
               </p>
             </div>
             <div>
@@ -136,8 +136,8 @@ const CarouselSlider = () => {
                 alt="Slide 7"
                 className="w-[10rem] h-[10rem]  rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Mega Hit Mix
               </p>
             </div>
             <div>
@@ -146,8 +146,8 @@ const CarouselSlider = () => {
                 alt="Slide 8"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hitsflex h-full justify-start
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                All out 80s
               </p>
             </div>
           </Slider>
@@ -164,7 +164,7 @@ const CarouselSlider = () => {
               alt="Slide 8"
               className="w-[10rem] h-[10rem] rounded-lg"
             />
-            <p className="text-white text-normal text-xl tracking-wide">
+            <p className="text-white text-normal pt-2 text-xl tracking-wide">
               Sleep
             </p>
           </div>
@@ -174,25 +174,15 @@ const CarouselSlider = () => {
               alt="Slide 8"
               className="w-[10rem] h-[10rem] rounded-lg"
             />
-            <p className="text-white text-normal text-xl tracking-wide">
+            <p className="text-white text-normal pt-2 text-xl tracking-wide">
               DayDreamer
-            </p>
-          </div>
-          <div className="w-[10rem] h-[10rem]">
-            <img
-              src="src\assets\08.jpg"
-              alt="Slide 8"
-              className="w-[10rem] h-[10rem] rounded-lg"
-            />
-            <p className="text-white text-normal text-xl tracking-wide">
-              Tekno
             </p>
           </div>
         </div>
 
         {/* SLIDE 03 */}
 
-        <h1 className="text-white text-bold text-xl  tracking-wide pt-5 pl-5">
+        <h1 className="text-white text-bold text-xl  tracking-wide pt-14 pl-5">
           Focus
         </h1>
         <div className="w-full">
@@ -203,8 +193,8 @@ const CarouselSlider = () => {
                 alt="Slide 1"
                 className="w-[10rem] h-[10rem] rounded-lg z-10"
               />
-              <p className="text-white text-bold text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Peaceful Piano
               </p>
             </div>
             <div>
@@ -213,8 +203,8 @@ const CarouselSlider = () => {
                 alt="Slide 2"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Deep Focus
               </p>
             </div>
             <div>
@@ -223,8 +213,8 @@ const CarouselSlider = () => {
                 alt="Slide 3"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Instrumental
               </p>
             </div>
             <div>
@@ -233,8 +223,8 @@ const CarouselSlider = () => {
                 alt="Slide 4"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Beats to think to
               </p>
             </div>
             <div>
@@ -243,8 +233,8 @@ const CarouselSlider = () => {
                 alt="Slide 5"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Focus Flow
               </p>
             </div>
             <div>
@@ -253,8 +243,8 @@ const CarouselSlider = () => {
                 alt="Slide 6"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Relaxing Reading
               </p>
             </div>
             <div>
@@ -263,8 +253,8 @@ const CarouselSlider = () => {
                 alt="Slide 7"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Reading Adventure
               </p>
             </div>
             <div>
@@ -273,8 +263,8 @@ const CarouselSlider = () => {
                 alt="Slide 8"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
-              <p className="text-white text-normal text-xl tracking-wide">
-                Today's Top Hits
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Quiet Moment
               </p>
             </div>
           </Slider>
