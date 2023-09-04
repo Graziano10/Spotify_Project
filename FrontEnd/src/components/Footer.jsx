@@ -1,73 +1,73 @@
 const Footer = () => {
   return (
     <>
-      <footer class="bg-tertiary">
-        <div class=" w-full p-4 px-8 py-6 lg:py-8 ">
-          <div class="md:flex md:justify-between">
-            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+      <footer className="bg-tertiary pt-5">
+        <div className=" w-full p-4 px-8 py-6 lg:py-8 ">
+          <div className="md:flex md:justify-between">
+            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 class="mb-3 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-3 text-sm font-semibold text-gray-900 uppercase dark:text-white hover:underline-offset-1 hover:text-white">
                   Company
                 </h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                  <li class="mb-2">
-                    <a href="https://flowbite.com/" class="hover:underline">
+                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <li className="mb-2">
+                    <a href="https://flowbite.com/" className="hover:underline hover:text-white">
                       About us
                     </a>
                   </li>
-                  <li class="mb-2">
-                    <a href="https://flowbite.com/" class="hover:underline">
+                  <li className="mb-2">
+                    <a href="https://flowbite.com/" className="hover:underline">
                       Job opportunities
                     </a>
                   </li>
                   <li>
-                    <a href="https://tailwindcss.com/" class="hover:underline">
+                    <a href="https://tailwindcss.com/" className="hover:underline">
                       Careers
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 class="mb-3 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-3 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                   Community
                 </h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                  <li class="mb-2">
+                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <li className="mb-2">
                     <a
                       href="https://github.com/themesberg/flowbite"
-                      class="hover:underline "
+                      className="hover:underline "
                     >
                       For Artist
                     </a>
                   </li>
-                  <li class="mb-2">
+                  <li className="mb-2">
                     <a
                       href="https://github.com/themesberg/flowbite"
-                      class="hover:underline "
+                      className="hover:underline "
                     >
                       Developer
                     </a>
                   </li>
-                  <li class="mb-2">
+                  <li className="mb-2">
                     <a
                       href="https://github.com/themesberg/flowbite"
-                      class="hover:underline "
+                      className="hover:underline "
                     >
                       Advertising
                     </a>
                   </li>
-                  <li class="mb-2">
+                  <li className="mb-2">
                     <a
                       href="https://github.com/themesberg/flowbite"
-                      class="hover:underline "
+                      className="hover:underline "
                     >
                       Investitor
                     </a>
                   </li>
-                  <li class="mb-2">
+                  <li className="mb-2">
                     <a
                       href="https://github.com/themesberg/flowbite"
-                      class="hover:underline "
+                      className="hover:underline "
                     >
                       Sellers
                     </a>
@@ -75,22 +75,22 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 class="mb-3 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-3 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                   Useful links
                 </h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                  <li class="mb-2">
-                    <a href="#" class="hover:underline">
+                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <li className="mb-2">
+                    <a href="#" className="hover:underline">
                       Assistency
                     </a>
                   </li>
-                  <li class="mb-2">
-                    <a href="#" class="hover:underline">
+                  <li className="mb-2">
+                    <a href="#" className="hover:underline">
                       Free mobile app
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="hover:underline">
+                    <a href="#" className="hover:underline">
                       Terms &amp; Conditions
                     </a>
                   </li>
@@ -185,11 +185,11 @@ const Footer = () => {
 
             {/* --- */}
           </div>
-          <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-          <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2023{" "}
-              <a href="https://flowbite.com/" class="hover:underline">
+              <a href="https://flowbite.com/" className="hover:underline">
                 Spotify
               </a>
             </span>

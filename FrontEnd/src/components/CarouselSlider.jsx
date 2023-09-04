@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const CarouselSlider = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const settings = {
     dots: false,
     infinite: false,
@@ -15,7 +13,8 @@ const CarouselSlider = () => {
     pauseOnHover: false,
     swipe: true,
     arrows: false,
-    smooth : true,
+    rtl: false,
+    smooth: true,
     responsive: [
       {
         breakpoint: 1450, // Imposta il breakpoint per schermi di dimensioni medie (md)
@@ -68,7 +67,7 @@ const CarouselSlider = () => {
         <h1 className="text-white text-bold text-xl tracking-wide pt-5 pl-5">
           Playlist Spotify
         </h1>
-        <div className="w-full float-left ">
+        <div className="w-full">
           <Slider {...settings} className="p-5 z-10">
             <div className="z-20">
               <img
@@ -154,35 +153,47 @@ const CarouselSlider = () => {
         </div>
 
         {/* SLIDE 02 */}
-        <h1 className="text-white text-bold text-xl  tracking-wide pl-5">
+        <h1 className="text-white text-bold text-xl tracking-wide pt-5 pl-5">
           Dream
         </h1>
-        <div className="flex gap-6 h-full p-5">
-          <div className="w-[10rem] h-[10rem]">
-            <img
-              src="src\assets\08.jpg"
-              alt="Slide 8"
-              className="w-[10rem] h-[10rem] rounded-lg"
-            />
-            <p className="text-white text-normal pt-2 text-xl tracking-wide">
-              Sleep
-            </p>
-          </div>
-          <div className="w-[10rem] h-[10rem]">
-            <img
-              src="src\assets\08.jpg"
-              alt="Slide 8"
-              className="w-[10rem] h-[10rem] rounded-lg"
-            />
-            <p className="text-white text-normal pt-2 text-xl tracking-wide">
-              DayDreamer
-            </p>
-          </div>
+        <div className="w-full">
+          <Slider {...settings} className="p-5 z-10">
+            <div className="z-20">
+              <img
+                src="src\assets\08.jpg"
+                alt="Slide 1"
+                className="w-[10rem] h-[10rem] rounded-lg z-10"
+              />
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Sleep
+              </p>
+            </div>
+            <div>
+              <img
+                src="src\assets\02.jpg"
+                alt="Slide 2"
+                className="w-[10rem] h-[10rem]  rounded-lg"
+              />
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                DayDreamer
+              </p>
+            </div>
+            <div>
+              <img
+                src="src\assets\pexels-photo-12939554.webp"
+                alt="Slide 3"
+                className="w-[10rem] h-[10rem]  rounded-lg"
+              />
+              <p className="text-white text-normal pt-2 text-xl tracking-wide">
+                Teckno
+              </p>
+            </div>
+          </Slider>
         </div>
 
         {/* SLIDE 03 */}
 
-        <h1 className="text-white text-bold text-xl  tracking-wide pt-14 pl-5">
+        <h1 className="text-white text-bold text-xl  tracking-wide pt-5 pl-5">
           Focus
         </h1>
         <div className="w-full">
@@ -219,7 +230,7 @@ const CarouselSlider = () => {
             </div>
             <div>
               <img
-                src="src\assets\06.jpg"
+                src="src\assets\12.jpg"
                 alt="Slide 4"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
@@ -229,7 +240,7 @@ const CarouselSlider = () => {
             </div>
             <div>
               <img
-                src="src\assets\05.jpg"
+                src="src\assets\15.jpg"
                 alt="Slide 5"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
@@ -239,7 +250,7 @@ const CarouselSlider = () => {
             </div>
             <div>
               <img
-                src="src\assets\03.jpg"
+                src="src\assets\relax.jpg"
                 alt="Slide 6"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
@@ -249,7 +260,7 @@ const CarouselSlider = () => {
             </div>
             <div>
               <img
-                src="src\assets\06.jpg"
+                src="src\assets\13.webp"
                 alt="Slide 7"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />
@@ -259,7 +270,7 @@ const CarouselSlider = () => {
             </div>
             <div>
               <img
-                src="src\assets\06.jpg"
+                src="src\assets\quiet.jpg"
                 alt="Slide 8"
                 className="w-[10rem] h-[10rem] rounded-lg"
               />

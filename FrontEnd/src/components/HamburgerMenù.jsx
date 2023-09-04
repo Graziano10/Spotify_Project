@@ -32,7 +32,7 @@ const HamburgerMenu = () => {
             onClick={toggleMenu}
             data-collapse-toggle="navbar-default"
             type="button"
-            className="bg-fourth text-invert inline-flex items-center w-10 h-10 justify-center text-sm rounded-lg hover:bg-secondary"
+            className="text-invert inline-flex items-center w-10 h-10 justify-center text-sm rounded-lg hover:bg-secondary"
             aria-controls="navbar-default"
             aria-expanded="false"
           >
@@ -93,7 +93,7 @@ const HamburgerMenu = () => {
                         Log-in
                       </Link>
                     </button>
-                    <button className="w-auto xl:w-[80rem] text-start tracking-wider hover:text-secondary xl:hover:translate-x-12 duration-100 ease-in-out">
+                    <button className="w-auto xl:w-[80rem] text-start tracking-wider hover:text-secondary pt-5 xl:hover:translate-x-12 duration-100 ease-in-out">
                       <Link
                         to="/Register"
                       >
