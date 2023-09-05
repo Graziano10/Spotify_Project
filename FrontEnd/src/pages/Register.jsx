@@ -158,194 +158,167 @@ const Resgister = () => {
           </label>
 
           <fieldset>
-            <legend class="sr-only flex h-full">Countries</legend>
-            <div className="ring">
-              <div class="flex items-center mb-4">
+            <div className="flex gap-3 my-3">
+              <div classname="flex items-center mb-4">
                 <input
                   id="country-option-1"
                   type="radio"
                   name="countries"
                   value="USA"
-                  class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
+                  classname="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
                   checked
                 />
                 <label
                   for="country-option-1"
-                  class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  classname="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  United States
+                  Male
                 </label>
               </div>
 
-              <div class="flex items-center mb-4">
+              <div classname="flex items-center mb-4">
                 <input
                   id="country-option-2"
                   type="radio"
                   name="countries"
                   value="Germany"
-                  class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
+                  classname="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
                   for="country-option-2"
-                  class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  classname="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Germany
+                  Female
+                </label>
+              </div>
+              <div classname="flex items-center mb-4">
+                <input
+                  id="country-option-2"
+                  type="radio"
+                  name="countries"
+                  value="Germany"
+                  classname="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="country-option-2"
+                  classname="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >
+                  Not binary
                 </label>
               </div>
             </div>
-            <div>
-              <div class="flex items-center mb-4">
+            <div className="flex gap-3 my-3">
+              <div classname="flex items-center mb-4">
                 <input
-                  id="country-option-3"
+                  id="country-option-1"
                   type="radio"
                   name="countries"
-                  value="Spain"
-                  class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:bg-gray-700 dark:border-gray-600"
+                  value="USA"
+                  classname="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
-                  for="country-option-3"
-                  class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  for="country-option-1"
+                  classname="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Spain
+                  Other
                 </label>
               </div>
 
-              <div class="flex items-center mb-4">
+              <div classname="flex items-center mb-4">
                 <input
-                  id="country-option-4"
+                  id="country-option-2"
                   type="radio"
                   name="countries"
-                  value="United Kingdom"
-                  class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring:blue-300 dark:focus-ring-blue-600 dark:bg-gray-700 dark:border-gray-600"
+                  value="Germany"
+                  classname="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
-                  for="country-option-4"
-                  class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  for="country-option-2"
+                  classname="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  United Kingdom
+                  Prefer not to specify
                 </label>
               </div>
-            </div>
-
-            <div class="flex items-center">
-              <input
-                id="option-disabled"
-                type="radio"
-                name="countries"
-                value="China"
-                class="w-4 h-4 border-gray-200 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:bg-gray-700 dark:border-gray-600"
-                disabled
-              />
-              <label
-                for="option-disabled"
-                class="block ml-2 text-sm font-medium text-gray-300 dark:text-gray-700"
-              >
-                China (disabled)
-              </label>
             </div>
           </fieldset>
 
-          <fieldset>
-            <legend class="sr-only">Checkbox variants</legend>
+          {/* --- */}
 
-            <div class="flex items-center mb-4">
+          <fieldset>
+            <div classname="flex items-center mb-4">
               <input
-                checked
+                id="checkbox-3"
+                type="checkbox"
+                value=""
+                classname="w-4 h-4 m-5"
+              />
+              <label
+                for="checkbox-3"
+                classname="ml-2 text-sm font-bold text-black"
+              >
+                I want to receive news and offers on Spotify.
+              </label>
+            </div>
+            <div classname="flex items-center mb-4">
+              <input
+                id="checkbox-2"
+                type="checkbox"
+                value=""
+                classname="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <label
+                for="checkbox-2"
+                classname="ml-2 text-sm font-medium text-black text-center indent-1.5"
+              >
+                <label
+                  for="checkbox-3"
+                  classname="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >
+                  Condividi i dettagli della mia registrazione con i fornitori
+                  di contenuti Spotify per scopi di marketing. Nota: i tuoi dati
+                  potrebbero essere trasferiti in un paese al di fuori dello SEE
+                  (Spazio economico europeo) secondo quanto descritto nella
+                  nostra informativa sulla privacy.
+                </label>
+              </label>
+            </div>
+
+            <div classname="flex items-center pt-4">
+              <input
                 id="checkbox-1"
                 type="checkbox"
                 value=""
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                classname="w-4 h-4"
               />
               <label
                 for="checkbox-1"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                classname="ml-2 text-sm font-medium text-black "
               >
                 I agree to the{" "}
                 <a
                   href="#"
-                  class="text-blue-600 hover:underline dark:text-blue-500"
+                  classname="text-invert underline underline-offset-1"
                 >
                   terms and conditions
                 </a>
                 .
               </label>
             </div>
-
-            <div class="flex items-center mb-4">
-              <input
-                id="checkbox-2"
-                type="checkbox"
-                value=""
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="checkbox-2"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
-                I want to get promotional offers
-              </label>
-            </div>
-
-            <div class="flex items-center mb-4">
-              <input
-                id="checkbox-3"
-                type="checkbox"
-                value=""
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="checkbox-3"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
-                I am 18 years or older
-              </label>
-            </div>
-
-            <div class="flex mb-4">
-              <div class="flex items-center h-5">
-                <input
-                  id="helper-checkbox"
-                  aria-describedby="helper-checkbox-text"
-                  type="checkbox"
-                  value=""
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                />
-              </div>
-              <div class="ml-2 text-sm">
-                <label
-                  for="helper-checkbox"
-                  class="font-medium text-gray-900 dark:text-gray-300"
-                >
-                  Free shipping via Flowbite
-                </label>
-                <p
-                  id="helper-checkbox-text"
-                  class="text-xs font-normal text-gray-500 dark:text-gray-400"
-                >
-                  For orders shipped from $25 in books or $29 in other
-                  categories
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-center">
-              <input
-                id="international-shipping-disabled"
-                type="checkbox"
-                value=""
-                class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-                disabled
-              />
-              <label
-                for="international-shipping-disabled"
-                class="ml-2 text-sm font-medium text-gray-400 dark:text-gray-500"
-              >
-                Eligible for international shipping (disabled)
-              </label>
-            </div>
           </fieldset>
-          <div className="h-full w-full mt-5 flex justify-center items-center">
-            <button>Sign-in</button>
+
+          {/* --- */}
+
+          <div className="h-full w-full mt-5 flex flex-col gap-3 justify-center items-center">
+            <p className="text-center text-[0.6rem] text-black font-normal tracking-wide">
+              To learn more about how Spotify collects, uses, shares, and
+              protects your personal data,{" "}
+              <a href="#" className="text-invert underline underline-offset-1">
+                please read Spotify's Privacy Policy.
+              </a>
+            </p>
+            <button className="w-[15rem] h-11 bg-invert rounded-full text-lg font-bold">
+              Sign-in
+            </button>
           </div>
         </form>
       </div>
