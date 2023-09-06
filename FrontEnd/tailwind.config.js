@@ -23,8 +23,10 @@ export default {
         secondary: "#b3b3b3", // Grey 02 text
         tertiary: " #121212", // black ***
         fourth: "  black", // Black bg-nav
-        invert: " #1db954", // Greeen button
+        invert: " #1ed760", // Greeen button
         colorText: "white" //white text
+        // invert: " #1db954",
+        
       },
     },
   },
