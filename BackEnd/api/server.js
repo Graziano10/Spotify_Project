@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const jwt = require('jsonwebtoken'); 
-const registerRouter = require('./route/register'); // Importa il modulo delle rotte degli utenti
-const loginRouter = require('./route/login');
+const registerRouter = require('./routes/register'); // Importa il modulo delle rotte degli utenti
+const loginRouter = require('./routes/login');
 
 // DATABASE
 require('dotenv').config();

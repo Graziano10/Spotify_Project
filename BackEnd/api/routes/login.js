@@ -58,7 +58,7 @@ const pool = new Pool({
 const secretKey = process.env.JWT_SECRET_KEY;
 
 // Rotta per il login dell'utente
-login.post('/login', async (req, res) => {
+router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
@@ -95,4 +95,4 @@ login.post('/login', async (req, res) => {
   }
 });
 
-module.exports = login;
+module.exports = router;

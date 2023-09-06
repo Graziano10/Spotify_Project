@@ -64,7 +64,7 @@ const hashPassword = async (password) => {
 }
 
 // Rotta per la registrazione di un nuovo utente e generazione del token JWT
-register.post('/registrazione', async (req, res) => {
+router.post('/registrazione', async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
 
   try {
@@ -93,4 +93,4 @@ register.post('/registrazione', async (req, res) => {
   }
 });
 
-module.exports = register;
+module.exports = router;
