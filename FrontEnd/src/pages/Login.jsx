@@ -1,4 +1,40 @@
-const Login = () => {
+import { useState } from "react";
+import axios from "axios";
+//import login from "../utility/internalMemory.js";
+import { login } from "../store/authSlice";
+
+const Login = ({ handleLogin }) => {
+  const [form, setForm] = useState({ email: "", password: "" });
+
+  const handleInput = ({ target: { name, value } }) => {
+    setForm((_form) => {
+      return { ..._form, [name]: value };
+    });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const results = await axios({
+        url: "http://localhost:3001/users/login",
+        method: "POST",
+        data: {
+          email: form.email,
+          password: form.password,
+        },
+      });
+
+      const data = results.data; // -> { user: { ... }, token: ... }
+      console.log(data);
+
+      InternalMemory.save("auth", data);
+
+      handleLogin(data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <>
       <div className="w-screen bg-black">
@@ -152,7 +188,10 @@ const Login = () => {
             <div className="h-[0.1rem] w-56 bg-white "></div>
           </div>
 
-          <form className="h-auto w-full flex flex-col justify-center items-start">
+          <form
+            onSubmit={handleSubmit}
+            className="h-auto w-full flex flex-col justify-center items-start"
+          >
             <div className="w-full">
               <label htmlFor="Email" className="font-bold text-white">
                 Email
@@ -164,6 +203,7 @@ const Login = () => {
                 className="text white border-2 bg-[#878787] border-[#121221] w-full h-12 mt-2 rounded-md p-3"
                 placeholder="email"
                 required
+                onInput={handleInput} value={form.email}
               />
             </div>
             <div className="w-full py-5">
@@ -171,12 +211,13 @@ const Login = () => {
                 Password
               </label>
               <input
-                type="Password"
-                name="Password"
-                id="Password"
+                type="password"
+                name="password"
+                id="password"
                 className="bg-[#878787] text-white border-2 border-[#121221] w-full h-12 mt-2 rounded-md p-3"
-                placeholder="Password"
+                placeholder="password"
                 required
+                onInput={handleInput} value={form.password}
               />
             </div>
 

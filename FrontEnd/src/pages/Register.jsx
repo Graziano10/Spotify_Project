@@ -1,4 +1,67 @@
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+//import { login } from "../store/authSlice";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 const Resgister = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [userData, setUserData] = useState({
+    username: "",
+    password: "",
+    email: "",
+  });
+
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Invia i dati di registrazione al server utilizzando Axios
+      // const response = await axios.post(
+      //   "http://localhost:3000/api/registrazione",
+      //   userData,
+      //   {
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //   }
+      // );
+      const results = await axios({
+        url: "http://localhost:3000/api/register",
+        method: "POST",
+        data: {
+          ...userData,
+        },
+      });
+
+      // Se la registrazione ha avuto successo, chiamiamo l'azione Redux Toolkit
+      //dispatch(registerUser(response.data));
+
+      // Reimposta i campi del modulo dopo una registrazione riuscita
+      setUserData({
+        username: "",
+        password: "",
+        email: "",
+      });
+      const data = results.data; // -> { user: { ... }, token: ... }
+      navigate("/");
+      // Mostra un messaggio di successo all'utente
+      alert("Registrazione avvenuta con successo!");
+    } catch (err) {
+      // Gestisci gli errori qui
+      console.log(err);
+    }
+  };
+
   return (
     <>
       <div className="bg-white h-full w-full p-10 flex flex-col justify-center items-center ring">
@@ -99,7 +162,10 @@ const Resgister = () => {
           Sign up with your email address.
         </h1>
 
-        <form className="h-full w-full flex flex-col justify-center items-start">
+        <form
+          onSubmit={handleSubmit}
+          className="h-full w-full flex flex-col justify-center items-start"
+        >
           <div className="w-full pt-5">
             <label htmlFor="Email" className="font-bold text-black">
               Email
@@ -111,6 +177,8 @@ const Resgister = () => {
               className="border-2 border-[#121221] w-full h-12 mt-2 rounded-md p-3"
               placeholder="email"
               required
+              value={userData.email}
+              onChange={handleChange}
             />
           </div>
           <div className="w-full py-5">
@@ -118,12 +186,14 @@ const Resgister = () => {
               Password
             </label>
             <input
-              type="Password"
-              name="Password"
-              id="Password"
+              type="password"
+              name="password"
+              id="password"
               className="border-2 border-[#121221] w-full h-12 mt-2 rounded-md p-3"
-              placeholder="Password"
+              placeholder="password"
               required
+              value={userData.password}
+              onChange={handleChange}
             />
           </div>
           <div className="w-full">
@@ -132,18 +202,20 @@ const Resgister = () => {
             </label>
             <input
               type="text"
-              name="text"
-              id="text"
+              name="username"
+              id="username"
               className="border-2 border-[#121221] w-full h-12 mt-2 rounded-md p-3"
               placeholder="Name"
               required
+              value={userData.username}
+              onChange={handleChange}
             />
             <p className="text-black tracking-wide">
               Questo compare nel tuo profilo.
             </p>
           </div>
 
-          <label htmlFor="birthdate" className="font-bold text-black mt-5">
+          {/* <label htmlFor="birthdate" className="font-bold text-black mt-5">
             Qual'e la data your brith
           </label>
           <input
@@ -152,7 +224,7 @@ const Resgister = () => {
             id="birthdate"
             className="border-2 border-[#121221] w-full h-12 mt-2 rounded-md p-3"
             required
-          />
+          /> */}
           <label htmlFor="birthdate" className="font-bold text-black mt-5">
             Sex
           </label>
@@ -316,7 +388,10 @@ const Resgister = () => {
                 please read Spotify's Privacy Policy.
               </a>
             </p>
-            <button className="w-[15rem] h-11 bg-invert rounded-full text-lg font-bold">
+            <button
+              type="submit"
+              className="w-[15rem] h-11 bg-invert rounded-full text-lg font-bold"
+            >
               Sign-in
             </button>
           </div>
