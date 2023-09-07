@@ -9,7 +9,7 @@ pool.on('error', (err) => {
 });
 
 // Test di connessione al database quando il pool è stato creato
-pool.connect((err, client, done) => {
+pool.connect((err, _, done) => {
     if (err) {
       console.error('Errore nella connessione al database:', err);
     } else {
