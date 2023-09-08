@@ -1,30 +1,19 @@
-const express = require("express");
+const express = require("express");        
 const app = express();
-const jwt = require("jsonwebtoken");
+
 const cors = require("cors");
-const registerRouter = require("./routes/register"); // Importa il modulo delle rotte degli utenti
-const loginRouter = require("./routes/login");
 
-// DATABASE
-require("dotenv").config();
-const db = require("./db/db.js");
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+//middleware
+app.use(express.json()); //req.body
 app.use(cors());
 
-// PAGE FRIST
-app.get("/", (_, res) => {
-  res.status(201).send("Good");
-});
+// register and login routes
 
-// REGISTER
-app.use("/api/register", registerRouter, (_, res) => {
-  res.status(201).send("Register");
-});
+app.use("/auth", require("./routes/jwtAuth"));
 
-// LOGIN
-app.use("/api/login", loginRouter);
+//dashboard route
+
+app.use("/dashboard", require("./routes/dashboard"));
 
 app.listen(3000, () => {
   console.log("Server up and running on http://localhost:3000... ");

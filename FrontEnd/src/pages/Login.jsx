@@ -16,7 +16,7 @@ const Login = ({ handleLogin }) => {
     event.preventDefault();
     try {
       const results = await axios({
-        url: "http://localhost:3001/users/login",
+        url: "http://localhost:3000/auth/login",
         method: "POST",
         data: {
           email: form.email,

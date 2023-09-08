@@ -43,56 +43,58 @@
 
 // module.exports = login;
 
+//-----------------------------------------------
 
-const express = require('express');
-const router = express.Router();
-const { Pool } = require('pg');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken'); // Importa la libreria jsonwebtoken
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-});
+// const express = require('express');
+// const router = express.Router();
+// const { Pool } = require('pg');
+// const bcrypt = require('bcrypt');
+// const jwt = require('jsonwebtoken'); // Importa la libreria jsonwebtoken
 
-// Chiave segreta per firmare il token
-const secretKey = process.env.JWT_SECRET_KEY;
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL,
+// });
 
-// Rotta per il login dell'utente
-router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
+// // Chiave segreta per firmare il token
+// const secretKey = process.env.JWT_SECRET_KEY;
 
-  try {
-    // Esegui una query per ottenere l'utente con l'email fornita
-    const query = {
-      text: 'SELECT * FROM utenti WHERE email = $1',
-      values: [email],
-    };
-    const result = await pool.query(query);
+// // Rotta per il login dell'utente
+// router.post('/login', async (req, res) => {
+//   const { email, password } = req.body;
 
-    if (result.rows.length === 0) {
-      return res.status(401).json({ message: 'Email non registrata' });
-    }
+//   try {
+//     // Esegui una query per ottenere l'utente con l'email fornita
+//     const query = {
+//       text: 'SELECT * FROM utenti WHERE email = $1',
+//       values: [email],
+//     };
+//     const result = await pool.query(query);
 
-    const user = result.rows[0];
+//     if (result.rows.length === 0) {
+//       return res.status(401).json({ message: 'Email non registrata' });
+//     }
 
-    // Verifica la password dell'utente
-    const passwordMatch = await bcrypt.compare(password, user.password);
+//     const user = result.rows[0];
 
-    if (!passwordMatch) {
-      return res.status(401).json({ message: 'Password errata' });
-    }
+//     // Verifica la password dell'utente
+//     const passwordMatch = await bcrypt.compare(password, user.password);
 
-    // Genera un token di autenticazione
-    const token = jwt.sign({ userId: user.id, email: user.email }, secretKey, {
-      expiresIn: '1h', // Imposta la scadenza del token (1 ora)
-    });
+//     if (!passwordMatch) {
+//       return res.status(401).json({ message: 'Password errata' });
+//     }
 
-    // Invia il token come parte della risposta
-    res.status(200).json({ message: 'Login avvenuto con successo', token });
-  } catch (error) {
-    console.error('Errore durante il login:', error);
-    res.status(500).json({ message: 'Errore durante il login' });
-  }
-});
+//     // Genera un token di autenticazione
+//     const token = jwt.sign({ userId: user.id, email: user.email }, secretKey, {
+//       expiresIn: '1h', // Imposta la scadenza del token (1 ora)
+//     });
 
-module.exports = router;
+//     // Invia il token come parte della risposta
+//     res.status(200).json({ message: 'Login avvenuto con successo', token });
+//   } catch (error) {
+//     console.error('Errore durante il login:', error);
+//     res.status(500).json({ message: 'Errore durante il login' });
+//   }
+// });
+
+// module.exports = router;

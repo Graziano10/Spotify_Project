@@ -1,7 +1,13 @@
-const { Pool } = require('pg');
+const Pool = require("pg").Pool;
+
+require("dotenv").config(); 
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  user: 'postgres',
+  password: 'postgres1234',
+  host: 'localhost',
+  port: 5432,
+  database: 'SpotyProject',
 });
 
 pool.on('error', (err) => {

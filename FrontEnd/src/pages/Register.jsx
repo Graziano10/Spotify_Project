@@ -25,27 +25,14 @@ const Resgister = () => {
     e.preventDefault();
 
     try {
-      // Invia i dati di registrazione al server utilizzando Axios
-      // const response = await axios.post(
-      //   "http://localhost:3000/api/registrazione",
-      //   userData,
-      //   {
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //   }
-      // );
+     
       const results = await axios({
-        url: "http://localhost:3000/api/register",
+        url: "http://localhost:3000/auth/register",
         method: "POST",
         data: {
           ...userData,
         },
       });
-
-      // Se la registrazione ha avuto successo, chiamiamo l'azione Redux Toolkit
-      //dispatch(registerUser(response.data));
-
       // Reimposta i campi del modulo dopo una registrazione riuscita
       setUserData({
         username: "",
