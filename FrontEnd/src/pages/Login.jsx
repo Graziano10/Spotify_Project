@@ -62,11 +62,11 @@ const Login = () => {
 
   return (
     <>
-      <div className="w-screen bg-black">
-        <div className="h-auto w-screen p-10 flex flex-col justify-center items-center">
+      <div className="w-full bg-black">
+        <div className="h-auto w-full p-10 flex flex-col justify-center items-center">
           {/* SVG SPOTIFY */}
-
-          <div className="w-full jlex justify-start items-center h-full mb-10">
+<div className="md:h-full md:justify-center mb:item-center md:max-w-2x">
+          <div className="w-full jlex justify-start items-center h-full mb-10 ">
             <svg
               role="img"
               viewBox="0 0 78 24"
@@ -283,6 +283,7 @@ const Login = () => {
               </div>
             </div>
           </form>
+          </div>
         </div>
       </div>
     </>
