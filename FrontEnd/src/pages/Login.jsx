@@ -1,37 +1,62 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
-//import login from "../utility/internalMemory.js";
 import { login } from "../store/authSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-const Login = ({ handleLogin }) => {
-  const [form, setForm] = useState({ email: "", password: "" });
 
-  const handleInput = ({ target: { name, value } }) => {
-    setForm((_form) => {
-      return { ..._form, [name]: value };
-    });
+const Login = () => {
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const emailRef = useRef();
+
+  const handleInput = (event) => {
+    setForm((_form) => ({
+      ..._form,
+      [event.target.name]: event.target.value,
+    }));
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
       const results = await axios({
         url: "http://localhost:3000/auth/login",
         method: "POST",
         data: {
-          email: form.email,
-          password: form.password,
+          ...form,
         },
       });
+      console.log(results);
 
-      const data = results.data; // -> { user: { ... }, token: ... }
-      console.log(data);
-
-      InternalMemory.save("auth", data);
-
-      handleLogin(data);
+      if (results.status == 200) {
+        const data = results.data; // -> { user: { ... }, token: ... }
+        console.log(results.status);
+        dispatch(login(data));
+        navigate("/");
+      } else {
+        toast.error("User not found!");
+        setForm({
+          email: "",
+          password: "",
+        });
+      }
     } catch (err) {
       console.error(err);
+      //toast.error("User not found!");
+      setForm({
+        email: "",
+        password: "",
+      });
+      emailRef.current.focus();
     }
   };
 
@@ -203,7 +228,8 @@ const Login = ({ handleLogin }) => {
                 className="text white border-2 bg-[#878787] border-[#121221] w-full h-12 mt-2 rounded-md p-3"
                 placeholder="email"
                 required
-                onInput={handleInput} value={form.email}
+                onInput={handleInput}
+                value={form.email}
               />
             </div>
             <div className="w-full py-5">
@@ -217,7 +243,8 @@ const Login = ({ handleLogin }) => {
                 className="bg-[#878787] text-white border-2 border-[#121221] w-full h-12 mt-2 rounded-md p-3"
                 placeholder="password"
                 required
-                onInput={handleInput} value={form.password}
+                onInput={handleInput}
+                value={form.password}
               />
             </div>
 

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const pool = require("../db/db");
 const bcrypt = require("bcrypt");
-const jwtGenerator = require("../utils/jwtGenerator")
+const jwtGenerator = require("../utility/jwtGenerator")
 const validation = require("../middleware/validation")
 const authorization = require("../middleware/authorization");
 
