@@ -21,6 +21,7 @@ Main libraries used:
 * Redux
 * Axios
 * Slick-carousel
+* React Toastify
 * Cors
 * Dotenv
 * Body-parser
