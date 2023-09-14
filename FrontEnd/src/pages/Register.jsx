@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 //import { login } from "../store/authSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Resgister = () => {
   const dispatch = useDispatch();
@@ -32,20 +34,53 @@ const Resgister = () => {
           ...userData,
         },
       });
+
+      const data = results.data;
       // Reimposta i campi del modulo dopo una registrazione riuscita
-      setUserData({
-        username: "",
-        password: "",
-        email: "",
-      });
-      const data = results.data; // -> { user: { ... }, token: ... }
-      navigate("/");
+      setTimeout(() => {
+        setUserData({
+          username: "",
+          password: "",
+          email: "",
+        });
+        navigate("/login");
+      }, 2500);
+
+      toastifySucces();
       // Mostra un messaggio di successo all'utente
-      alert("Registrazione avvenuta con successo!");
+      //alert("Registrazione avvenuta con successo!");
     } catch (err) {
+      toastifyError();
       // Gestisci gli errori qui
       console.log(err);
     }
+  };
+
+  const toastifySucces = () => 
+    toast.success("Registation done!", {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
+    
+
+  const toastifyError = () => {
+    toast.error("Registration error!", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   };
 
   return (
@@ -150,7 +185,7 @@ const Resgister = () => {
           <h1 className="font-bold tracking-wide text-center text-black text-lg">
             Sign up with your email address.
           </h1>
-
+          <ToastContainer/>
           <form
             onSubmit={handleSubmit}
             className="h-full w-full flex flex-col justify-center items-start"
